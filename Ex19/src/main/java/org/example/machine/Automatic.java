@@ -2,38 +2,40 @@ package org.example.machine;
 
 import java.util.Arrays;
 
-public class Automatic extends seleck {
+public class Automatic extends storage {
 
     public void Aprint(int S) {
 
-        int[][] num = new int[S][6];
+        int[] num = new int[45];
+        int[] fnum = new int[6];
 
-        for (int i = 0; i < num.length; i++) {
-            for (int j = 0; j < num[i].length; j++) {
+        for (int i = 0; i < num.length; i++)
+               num[i]=i+1;
 
-                num[i][j] = (int) (Math.random() * 45) + 1;
+               int temp;       //처번째 배열로 들어가질 임시공간
+               int j;          //번호 담을 그릇
+               int count = 0 ; //while 카운터용
 
-                for(int z=0; z<j; z++){
+               while (true) {
+                   count++;
+                   for (int i = 0; i < 6; i++) {
+                       j = (int) (Math.random() * 45);
+                       temp = num[i];
+                       num[i] = num[j];
+                       num[j] = temp;
+                   }
+                   for(int i=0; i<6; i++) {
+                       fnum[i] = num[i];
+                   }
+                   Arrays.sort(fnum); // 배열 오름차순 명령어
+                   System.out.println(Arrays.toString(fnum));
 
-                    if(num[i][z]==num[i][j]){
-                        j--; //j배열의 칸에서 z 숫자와 중복되면 중복된값 제거후 for로 돌아감
-                        break;
-                    }
-                }
+               if(count==S){
+                   System.out.println();
+                   System.out.println(end4);
+                   break;
+                  }
+               }
             }
-            for(int j=0; j< num[i].length-1; j++){
-                for(int z=j+1; z<num[S].length; z++){
+         }
 
-                    if(num[i][j]>num[i][z]){
-                        int temp = num[i][z];
-                        num[i][z]=num[i][j];
-                        num[i][j]=temp;
-                    }
-                }
-            }
-            System.out.println(Arrays.toString(num[i]));
-        }
-        System.out.println();
-        System.out.println(end);
-            }
-        }

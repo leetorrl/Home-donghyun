@@ -13,8 +13,9 @@ public void S(){
 
     try {
         System.out.println();
-        System.out.println();
         System.out.print(M);
+        System.out.println();
+        System.out.println();
 
         int A = Arrays.nextInt();
         seleck ss = new seleck();

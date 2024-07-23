@@ -15,6 +15,6 @@ public class Manual extends storage {
             }
         }
         System.out.println();
-        System.out.println(end);
+        System.out.println(end1);
     }
 }
