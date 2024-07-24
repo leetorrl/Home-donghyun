@@ -18,8 +18,6 @@ public class seleck extends storage{
         System.out.println();
         System.out.println();
 
-
-
         switch (B){
 
             case 1 :
