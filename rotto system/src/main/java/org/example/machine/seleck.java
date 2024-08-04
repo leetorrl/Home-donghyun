@@ -14,10 +14,9 @@ public class seleck extends storage{
         System.out.println(lain);
         System.out.println();
         System.out.print(EEEE);
-        System.out.println();
-        System.out.println();
-
         int B = scan2.nextInt();
+        System.out.println();
+        System.out.println();
 
         switch (B){
 

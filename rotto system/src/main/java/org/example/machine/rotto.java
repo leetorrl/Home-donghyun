@@ -14,10 +14,10 @@ public void S(){
     try {
         System.out.println();
         System.out.print(M);
+        int A = Arrays.nextInt();
         System.out.println();
         System.out.println();
 
-        int A = Arrays.nextInt();
         seleck ss = new seleck();
 
         switch (A){
