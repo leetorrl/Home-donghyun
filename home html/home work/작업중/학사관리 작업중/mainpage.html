@@ -146,17 +146,28 @@
         .side1 {
             /*부모없음, z-index 가장 우선권을 가지게 할것, 필요없으면 주석처리*/
             margin: 0 auto;
-            background-color: brown;
+            background-color: rgb(37, 21, 21);
+            
             position: fixed;
             top: 200px;
-            left: 50px;
-            width: 200px;
+            right: 50px;
+            line-height: 100px;
+
+            cursor: pointer;
+            
+            width: 100px;
             height: 100px;
+            border-radius: 50% 50% 50% 50%;
             word-break: break-all;
             z-index: 2;
             /*숫자가 높을수록 위에 표시
                          만들생각 없었는데 그리드가 자꾸 가림 ㅡㅡ*/
         }
+
+        .side1 b:hover{
+            color: tomato;
+        }
+
 
         .main {
             /*container 자식, base 부모, 그리드AA 부모, 헤더 다음 float,
@@ -196,7 +207,7 @@
              이 구역에 내용넣지 말것...그리드 위치 일그러짐,
             생성한 그리드 너비 높이 조절만, 위치 조절은 취향것*/
 
-            width: 1000px;
+            width: 800px;
 
             /* background-color: bisque; */
             display: grid;
@@ -208,7 +219,7 @@
             /* border: 1px solid black; */
 
             position: absolute;
-            top: 70%;
+            top: 65%;
             left: 50%;
             transform: translate(-50%, -50%);
             /*센터 조절시 top letf50%에 50% 50% 셋팅*/
@@ -245,13 +256,13 @@
 <body>
     <div class="wrap">
         <div class="side1">
-           <p>로그인 페이지로</p> 
+           <p style="color: #eee; font-size: 13px; text-align: center;" class="side11"><b>로그인 페이지로</b></p> 
             <!-- <caption>사이드</caption> -->
         </div>
 
         <div class="container">
             <div class="header">
-
+<h1 style="text-align: center; line-height: 150px;"><미니언즈 대학></h1>
                 <div class="guide1">
                     <ul class="listt1">
                         <li class="qq1" onclick="openqq1()"><b>조원소개</b></li>
@@ -274,18 +285,13 @@
                 <!-- <caption>메인</caption> -->
 
                 <div class="base">
-                    <div class="PP" style="padding: 10px; height: auto;">
+                    <div class="PP" style="padding: 10px; height: auto; text-align: center;">
                    <h1>-방문을 환영합니다-</h1>
                    <br>
                    <img src="Image/minion-biz-featured.webp" alt="" style="width: 400px; 
-                                  border-radius: 10px 10px 10px 10px; margin-left: 5px; display:inline-block; vertical-align: top;">
-                                <p style="display: inline-block; border-radius: 10px 10px 10px 10px; font-size: 25px; background-color:rgba(238, 238, 238, 50%);">                                                       
-                                                                                       본 시설은 슈퍼 악당을 섬기기 위한 미니언들의<br>
-                                                                                       기초능력을 가르치는 공간이며 미래 사회의 악당<br>
-                                                                                       조연이 될 수준 높은 전문가들을 양상하고<br>
-                                                                                       있습니다. <br>
-                                                                                       <br>
-                                                                                       - 미니언즈 대학대표 : 그루 -<br><br><br></p>
+                                  border-radius: 10px 10px 10px 10px; margin-left: 5px;">
+                                                                                       
+                                                                                      
                    </div>
                     <div class="hidden">
         <div class="QQ">
@@ -320,7 +326,7 @@
                 <h1 style="text-align: center;">-공사중-</h1>
                 <br>
                <div style="text-align: center;"><img src="Image/e12d65350729e75591e886b91a724de184f0a62ca0c0c36a3fca9bf76f0213f6.jpg" alt="" 
-                     style="width: 800px; border-radius: 10px 10px 10px 10px; "></div> 
+                     style="width: 500px; border-radius: 10px 10px 10px 10px; "></div> 
                 <!-- <li class="listrrr">rr하나</li>
                 <li class="listrrr">rr둘</li>
                 <li class="listrrr">rr셋</li>
